@@ -713,7 +713,7 @@ nm_l2tp_config_write (NML2tpPlugin *plugin,
 		write_config_option (ipsec_fd, "  pfs=no\n");
 	} else {
 		write_config_option (ipsec_fd, "  esp=aes128-sha1,3des-sha1\n");
-		write_config_option (ipsec_fd, "  ike=aes128-sha1-modp2048,3des-sha1-modp1536,3des-sha1-modp1024\n");
+		write_config_option (ipsec_fd, "  ike=aes128-sha1-modp2048,3des-sha1-modp1536,3des-sha1-modp1024,3des-md5-modp1024\n");
 		write_config_option (ipsec_fd, "  keyexchange=ikev1\n");
 	}
 	value = nm_setting_vpn_get_data_item (s_vpn, NM_L2TP_KEY_IPSEC_FORCEENCAPS);
